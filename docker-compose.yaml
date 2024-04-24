@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  react-app:
+    image: react-app
+
+    container_name: myFrontend
+
+    ports:
+      - "8000:8000"
+
+    stdin_open: true
+    tty: true
+    command: npm run dev 
+  backend:
+    image: backend
+    container_name: myBackend
+    ports:
+      - "3000:3000"
+
+    command: npm start
